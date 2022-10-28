@@ -28,5 +28,9 @@ class obtenerAccionTest extends TestCase
     {
         $this->assertEquals("registrar", obtenerAccion::obtenerAccion(false,false,true,"","externo"));
     }
+    public function test_prueba5()
+    {
+        $this->assertEquals("matricular", obtenerAccion::obtenerAccion(false,false,true,"vigente",""));
+    }
 }
 
