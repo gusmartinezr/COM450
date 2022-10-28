@@ -4,7 +4,7 @@ namespace App\Library;
 
 class obtenerAccion{
 
-    public static function obtenerAccion($esObligatorio=false,$esDocente=false,$esExtremo=false,$estadoRegistro=""){
+    public static function obtenerAccion($esObligatorio=false,$esDocente=false,$esExterno=false,$estadoRegistro="",$tipoPersonaDestino=""){
         
         if($esObligatorio==true && $esDocente==true){
             return 'actualizar';
@@ -12,8 +12,11 @@ class obtenerAccion{
         if($esObligatorio==false && $esDocente==true){
             return 'matricular';
         }
-        if($esExtremo==true && $estadoRegistro=="porConfirmar"){
+        if($esExterno==true && $estadoRegistro=="porConfirmar"){
             return "actualizar";
+        }
+        if($esExterno==true &&$tipoPersonaDestino=="externo" ){
+            return "registrar";
         }
  }
 }
