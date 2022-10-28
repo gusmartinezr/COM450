@@ -18,5 +18,8 @@ class obtenerAccion{
         if($esExterno==true &&$tipoPersonaDestino=="externo" ){
             return "registrar";
         }
+        if($esExterno =true && $estadoRegistro=="vigente"){
+            return "matricular";
+        }
  }
 }
