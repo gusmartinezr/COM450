@@ -12,8 +12,12 @@ class obtenerAccionTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_prueba1()
     {
         $this->assertEquals("actualizar", obtenerAccion::obtenerAccion(true,true));
+    }
+    public function test_prueba2()
+    {
+        $this->assertEquals("matricular", obtenerAccion::obtenerAccion(false,true));
     }
 }
