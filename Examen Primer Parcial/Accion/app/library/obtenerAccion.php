@@ -9,5 +9,8 @@ class obtenerAccion{
         if($esObligatorio==true && $esDocente==true){
             return 'actualizar';
         }
+        if($esObligatorio==false && $esDocente==true){
+            return 'matricular';
+        }
  }
 }
